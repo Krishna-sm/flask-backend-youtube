@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %}
+Home page
+{% endblock title %}
+{% block body %}
+<h1>homw page</h1>
+
+<img src="{{url_for('static', filename='images/image.png')}}" alt="">
+
+<a href="{{url_for('hello2')}}">go to about page</a>
+
+<button onclick="alertMe()" class="btn btn-primary">sumbit button</button>
+{% endblock body %}
