@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <h1>contact form</h1>
+            <p style="background-color: teal;color: white;">{{msg}}</p>
+        <center>
+            <form action="{{url_for('hello2')}}" method="post">
+                <input type="text" name="name" placeholder="enter name"> <br>
+                <input type="email" name="email" placeholder="enter Email address"> <br>
+                <input type="tel" name="mobile" placeholder="enter mobile no"> <br>
+                <textarea name="message" id="" cols="30" rows="10"></textarea><br>
+                <input type="checkbox" name="hobbies" value="coding"/><br>
+                <button type="submit">Submit</button>
+              </form>
+        </center>
+
+    </body>
+</html>
