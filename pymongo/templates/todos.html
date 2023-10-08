@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todos</title>
+</head>
+<body>
+                    <table border="1" width="">
+                        <tr>
+                            <th>id</th>
+                            <th>title</th>
+                            <th>description</th>
+                            <th>complete</th>
+                            <th>action</th>
+                        </tr>
+                                {% if data|length > 0 %}
+                                {% for item in data %}
+                               <tr>
+                                <td>{{loop.index}}</td>
+                                <td>{{item.title}}</td>
+                                <td>{{item.description}}</td>
+                                <td>
+                                    {% if item.isComplete %}
+                                    complete
+                                     {% else %}
+                                     uncomplete
+                                     {% endif %}
+                                </td>
+                                <td>
+                                    <a href="{{url_for('update_doc',id=item.id)}}">Update</a>
+                                    <a href="{{url_for('delete_doc',id=item.id)}}">delete</a>
+                                 
+                                </td>
+                               </tr>
+                                {% endfor %}
+                                {% endif %}
+                    </table>
+</body>
+</html>
